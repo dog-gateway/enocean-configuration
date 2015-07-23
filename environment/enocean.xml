@@ -144,5 +144,37 @@
                 </dhc:statevalues>
             </dhc:state>
         </dhc:device>
+        <dhc:device class="SingleTemperatureSensor" id="SingleTemperatureSensor_25851935" domoticSystem="EnOcean" gateway="enocean-gateway">
+            <dhc:description>New Device of type SingleTemperatureSensor</dhc:description>
+            <dhc:isIn></dhc:isIn>
+            <dhc:param name="address" value="0x018a781f" type="network"/>
+            <dhc:param name="eep" value="a5-02-05" type="network"/>
+            <dhc:param name="uid" value="25851935" type="network"/>
+            <dhc:controlFunctionality class="TemperatureMeasurementFunctionality">
+                <dhc:commands>
+                    <dhc:command class="GetTemperatureCommand" name="GetTemperatureCommand_SingleTemperatureSensor_25851935" id="GetTemperatureCommand_SingleTemperatureSensor_25851935">
+                        <dhc:param name="realCommandName" value="getTemperature"/>
+                        <dhc:param name="returnType" value="Measure"/>
+                    </dhc:command>
+                </dhc:commands>
+            </dhc:controlFunctionality>
+            <dhc:notificationFunctionality class="TemperatureMeasurementNotificationFunctionality">
+                <dhc:notifications>
+                    <dhc:notification class="TemperatureMeasurementNotification" id="TemperatureMeasurementNotification_SingleTemperatureSensor_25851935">
+                        <dhc:param name="nParams" value="2"/>
+                        <dhc:param name="notificationName" value="newTemperatureValue"/>
+                        <dhc:param name="unitOfMeasure" value="C"/>
+                        <dhc:param name="notificationParamName" value="temperatureValue" type="Measure"/>
+                    </dhc:notification>
+                </dhc:notifications>
+            </dhc:notificationFunctionality>
+            <dhc:state class="TemperatureState">
+                <dhc:statevalues>
+                    <dhc:statevalue class="TemperatureStateValue" name="">
+                        <dhc:param name="unitOfMeasure" value="C"/>
+                    </dhc:statevalue>
+                </dhc:statevalues>
+            </dhc:state>
+        </dhc:device>
     </dhc:controllables>
 </dhc:dogHomeConfiguration>
